@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!-- Welcome File -->
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Controller Servlet Configuration -->
+    <servlet>
+        <servlet-name>ControllerServlet</servlet-name>
+        <servlet-class>com.shein.ControllerServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- Controller Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>ControllerServlet</servlet-name>
+        <url-pattern>/cs</url-pattern>
+    </servlet-mapping>
+
+    <!-- Cart Servlet Configuration -->
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.shein.CartServlet</servlet-class>
+    </servlet>
+
+    <!-- Cart Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+
+    <!-- Checkout Servlet Configuration -->
+    <servlet>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <servlet-class>com.shein.CheckoutServlet</servlet-class>
+    </servlet>
+
+    <!-- Checkout Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <url-pattern>/checkout</url-pattern>
+    </servlet-mapping>
+
+    <!-- Confirmation Servlet Configuration -->
+    <servlet>
+        <servlet-name>ConfirmationServlet</servlet-name>
+        <servlet-class>com.shein.ConfirmationServlet</servlet-class>
+    </servlet>
+
+    <!-- Confirmation Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>ConfirmationServlet</servlet-name>
+        <url-pattern>/confirmation</url-pattern>
+    </servlet-mapping>
+
+</web-app>
